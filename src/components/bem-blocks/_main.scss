@@ -1,0 +1,221 @@
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background-color: #f0f0f0;
+}
+
+.btn {
+   padding: 15px 50px;
+   cursor: pointer;
+}
+
+.stopwatch {
+   display: flex;
+   margin-left: 220px;
+
+   &__bg {
+      width: 370px;
+      height: 370px;
+      position: relative;
+      background-image: url(../img/clockbg.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+
+   &__minutes {
+      position: absolute;
+      top: -6%;
+      left: 50%;
+      transform: translateX(-50%);
+      transform-origin: bottom;
+      width: 0px;
+      height: 207px;
+      border: 15px solid transparent;
+      border-top: 15px solid rgba(0, 0, 0, 0.9);
+      border-radius: 10% / 15%;
+      background-color: transparent;
+   }
+
+   &__cont {
+      width: 220px;
+      display: flex;
+      position: absolute;
+      justify-content: space-between;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: RobotoMono;
+      font-size: 2.75rem;
+   }
+
+   &-tile {
+      position: relative;
+      width: 370px;
+      height: 370px;
+      margin-left: 150px;
+      font-family: OpenSans;
+
+      &__item {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+         transition: all 0.4s ease-out;
+
+         &.fade {
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+         }
+
+         &.show {
+            margin: 20px 0;
+            padding: 20px 0;
+            opacity: 1;
+         }
+
+      }
+
+      &__list {
+         margin-top: -20px;
+      }
+
+      &__lap {
+         font-size: 1.5rem;
+      }
+
+      &__time {
+         font-size: 1.725rem;
+         letter-spacing: 1.2px;
+      }
+
+      &__diff {
+         font-size: 1.25rem;
+      }
+
+      &__buttons {
+         display: flex;
+         justify-content: center;
+         position: absolute;
+         width: 100%;
+         bottom: 0;
+
+         .btn-switch {
+            display: none;
+            cursor: pointer;
+            border-color: rgba(0, 0, 0, 0.7);
+         }
+      }
+
+      &__btnstart {
+         border-color: rgba(0, 0, 0, 0.7);
+         border-radius: 7% / 50%;
+         padding: 12px 135px;
+         cursor: pointer;
+
+         &:hover {
+            background-color: #e6e6e6;
+         }
+      }
+
+      &__btnlap {
+         border-radius: 14% / 50% 0 0 50%;
+         padding: 12px 61px;
+
+         &:hover {
+            background-color: #e6e6e6;
+         }
+      }
+
+      &__btnpause {
+         border-radius: 14% / 0 50% 50% 0;
+         border-left: none;
+         padding: 12px 54px;
+
+         &:hover {
+            background-color: #e6e6e6;
+         }
+      }
+
+      &__btnrestart {
+         display: none;
+         border-radius: 14% / 0 50% 50% 0;
+         padding: 12px 49.5px;
+         border-left: none;
+         border-color: rgba(0, 0, 0, 0.7);
+         cursor: pointer;
+
+         &:hover {
+            background-color: #e6e6e6;
+         }
+      }
+   }
+
+   &__mini {
+      width: 65px;
+      height: 65px;
+      position: absolute;
+      top: 67%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 3px solid black;
+      border-radius: 50%;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 12px;
+         height: 12px;
+         border: 3px solid black;
+         border-radius: 50%;
+         background-color: #f0f0f0;
+         z-index: 10;
+      }
+   }
+
+   &__sec {
+      position: absolute;
+      top: 7%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 3px;
+      height: 25px;
+      background-color: black;
+      transform-origin: bottom;
+   }
+}
+
+.lapnumb {
+   font-size: 0.8rem;
+   vertical-align: top;
+}
+
+.btn-switch {
+   display: none;
+   border-color: rgba(0, 0, 0, 0.7);
+   cursor: pointer;
+}
+
+.stopwatch__minutes.animation-minhand {
+   animation: rotation 60s linear infinite;
+}
+
+.stopwatch__sec.animation-minhand {
+   animation: rotation 1s linear infinite;
+}
+
+
+@keyframes rotation {
+   0% {
+      transform: translateX(-50%) rotate(0deg);
+   }
+
+   100% {
+      transform: translateX(-50%) rotate(360deg);
+   }
+}

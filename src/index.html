@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"en",
+"title":"stopwatch",
+"description":"",
+"keywords":"",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+   <div class="stopwatch">
+      <div class="stopwatch__bg">
+         <div class="stopwatch__minutes stranim"></div>
+         <div class="stopwatch__timer">
+            <div class="stopwatch__cont">
+               <div class="stopwatch__numb minutes">00</div>
+               <div class="">:</div>
+               <div class="stopwatch__numb seconds">00</div>
+               <div class="">.</div>
+               <div class="stopwatch__numb mseconds">0</div>
+            </div>
+            <div class="stopwatch__mini">
+               <div class="stopwatch__sec stranim"></div>
+            </div>
+         </div>
+      </div>
+      <div class="stopwatch-tile">
+         <div class="stopwatch-tile__list" data-gap="0"></div>
+         <div class="stopwatch-tile__buttons">
+            <button class="stopwatch-tile__btnstart">Start</button>
+            <button class="stopwatch-tile__btnlap btn-switch">Lap</button>
+            <button class="stopwatch-tile__btnpause btn-switch" >Pause</button>
+            <button class="stopwatch-tile__btnrestart">Restart</button>
+         </div>
+      </div>
+   </div>
+   @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

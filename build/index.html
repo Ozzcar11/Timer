@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+				content="">
+	<meta name="keywords"
+				content="">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.svg"
+				type="image/svg+xml">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.webp"
+				type="image/webp">
+	<link rel="shortcut icon"
+				href="img/favicons/favicon.png"
+				type="image/x-icon">
+	<link rel="stylesheet"
+				href="css/libs.min.css">
+	<link rel="stylesheet"
+				href="css/style.min.css">
+	<title>stopwatch</title>
+</head>
+
+<body>
+   <div class="stopwatch">
+      <div class="stopwatch__bg">
+         <div class="stopwatch__minutes stranim"></div>
+         <div class="stopwatch__timer">
+            <div class="stopwatch__cont">
+               <div class="stopwatch__numb minutes">00</div>
+               <div class="">:</div>
+               <div class="stopwatch__numb seconds">00</div>
+               <div class="">.</div>
+               <div class="stopwatch__numb mseconds">0</div>
+            </div>
+            <div class="stopwatch__mini">
+               <div class="stopwatch__sec stranim"></div>
+            </div>
+         </div>
+      </div>
+      <div class="stopwatch-tile">
+         <div class="stopwatch-tile__list" data-gap="0"></div>
+         <div class="stopwatch-tile__buttons">
+            <button class="stopwatch-tile__btnstart">Start</button>
+            <button class="stopwatch-tile__btnlap btn-switch">Lap</button>
+            <button class="stopwatch-tile__btnpause btn-switch" >Pause</button>
+            <button class="stopwatch-tile__btnrestart">Restart</button>
+         </div>
+      </div>
+   </div>
+   <script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
